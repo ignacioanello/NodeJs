@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="../../public/img/weather.png">
+    <link rel="stylesheet" href="./css/styles.css" />
+
+</head>
+
+<body>
+    <div class="main-content">
+        {{!-- render partial --}}
+        {{>header}}
+
+        <p>Use this site to get your weather!</p>
+
+        <form id="searchForm">
+            <label for="citySearchInput">City</label>
+            <input id="citySearchInput" value="Buenos Aires">
+            <br><br>
+            <label for="countrySearchInpu">Country</label>
+            <input id="countrySearchInput" value="Argentina">
+            <br><br>
+            <button id="searchBtn" type="submit">Search</button>
+        </form>
+
+        <p id="paragraph"></p>
+
+        <p id="paragraph-error"></p>
+    </div>
+
+    {{!-- render partial --}}
+    {{>footer}}
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
