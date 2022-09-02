@@ -5,6 +5,7 @@ const axios = require('axios').default;
 const chalk = require('chalk');
 
 const app = express();
+const PORT = process.env.PORT || 3002;
 
 // DEFINE PATHS FOR EXPRESS CONFIG
 // Sirviendo static files mediante la ruta (Aca sirve el index.html en el root path) (default)
@@ -146,6 +147,6 @@ app.get('*', (req, resp) => {
     });
 });
 
-app.listen('3002', () => {
+app.listen(PORT, () => {
     console.log('Server running');
 })

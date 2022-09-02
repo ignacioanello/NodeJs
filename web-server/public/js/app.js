@@ -19,7 +19,9 @@ console.log('Client side JavaScript loaded');
 // ########### With Async/Await ###########
 const getForecast = async (city, country) => {
     // fetch('https://puzzle.mead.io/puzzle')
-    const response = await fetch(`http://localhost:3002/weather?city=${city}&country=${country}`);
+    // Para hacer el depoloy hay que usar el dominio del site donde se deploya
+    // const response = await fetch(`http://localhost:3002/weather?city=${city}&country=${country}`);
+    const response = await fetch(`/weather?city=${city}&country=${country}`);
     const json = await response.json();
     if (json.error) {
         throw json.error;
